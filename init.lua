@@ -359,22 +359,22 @@ require('lazy').setup({
   },
 
   -- Auto changes theme based on system
-  --[[{
+  {
     'f-person/auto-dark-mode.nvim',
     config = function()
       require('auto-dark-mode').setup {
         update_interval = 1000,
         set_dark_mode = function()
-          vim.cmd 'colorscheme rose-pine-main'
+          vim.cmd 'colorscheme kanso-mist'
         end,
         set_light_mode = function()
-          vim.cmd 'colorscheme rose-pine-dawn'
+          vim.cmd 'colorscheme kanso-pearl'
         end,
       }
       -- Enable the plugin on startup
       require('auto-dark-mode').init()
     end,
-  },]]
+  },
   -- See `:help gitsigns` to understand what the configuration keys do
   { -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
@@ -630,9 +630,14 @@ require('lazy').setup({
     end,
   },
   {
+    'webhooked/kanso.nvim',
+    lazy = false,
+    priority = 1000,
+  },
+  {
     'everviolet/nvim',
     name = 'evergarden',
-    priority = 1000, -- Colorscheme plugin is loaded first before any other plugins
+    --priority = 1000, -- Colorscheme plugin is loaded first before any other plugins
     opts = {
       theme = {
         variant = 'fall', -- 'winter'|'fall'|'spring'|'summer'
