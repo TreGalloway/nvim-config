@@ -359,7 +359,7 @@ require('lazy').setup({
   },
 
   -- Auto changes theme based on system
-  {
+  --[[{
     'f-person/auto-dark-mode.nvim',
     config = function()
       require('auto-dark-mode').setup {
@@ -374,7 +374,7 @@ require('lazy').setup({
       -- Enable the plugin on startup
       require('auto-dark-mode').init()
     end,
-  },
+  },]]
   -- See `:help gitsigns` to understand what the configuration keys do
   { -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
@@ -623,7 +623,7 @@ require('lazy').setup({
     end,
   },
   -- THEME CONFIGURATION START
-  --[[{
+  {
     'T3rmn/Ghostty_dark_nvim',
     config = function()
       vim.cmd.colorscheme 'ghostty_dark'
@@ -632,7 +632,7 @@ require('lazy').setup({
   {
     'everviolet/nvim',
     name = 'evergarden',
-    --priority = 1000, -- Colorscheme plugin is loaded first before any other plugins
+    priority = 1000, -- Colorscheme plugin is loaded first before any other plugins
     opts = {
       theme = {
         variant = 'fall', -- 'winter'|'fall'|'spring'|'summer'
@@ -650,11 +650,11 @@ require('lazy').setup({
         },
       },
     },
-  },]]
+  },
   {
     'rose-pine/neovim',
     name = 'rose-pine',
-    priority = 1000, -- Make sure it loads before other plugins
+    -- priority = 1000, -- Make sure it loads before other plugins
   },
   --[[ 
   {
@@ -667,7 +667,7 @@ require('lazy').setup({
   },]]
   {
     'vague2k/vague.nvim',
-    priority = 500,
+    --priority = 500,
     init = function()
       vim.cmd.colorscheme 'vague'
       vim.cmd.hi 'Comment gui=none'
@@ -708,7 +708,7 @@ require('lazy').setup({
   },]]
   {
     'sho-87/kanagawa-paper.nvim',
-    priority = 500,
+    --priority = 500,
     lazy = false,
     opts = {},
     init = function()
@@ -716,7 +716,6 @@ require('lazy').setup({
       vim.cmd.hi 'Comment gui=none'
     end,
   },
-  { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
   --[[
   {
     'folke/tokyonight.nvim',
