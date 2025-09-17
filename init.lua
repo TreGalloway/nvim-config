@@ -242,6 +242,9 @@ require('lazy').setup({
     dependencies = { 'echasnovski/mini.icons' }, -- optional, for file icons
     config = function()
       local oil = require 'oil'
+      keymaps = {
+        ['g.'] = { 'actions.toggle_hidden', mode = 'n' },
+      }
       oil.setup()
       vim.keymap.set('n', '-', oil.toggle_float, { desc = 'Toggle Oil floating window' })
     end,
