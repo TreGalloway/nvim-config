@@ -302,12 +302,6 @@ require('lazy').setup({
     config = true,
   },
   -- Supermaven plugin
-  {
-    'supermaven-inc/supermaven-nvim',
-    config = function()
-      require('supermaven-nvim').setup {}
-    end,
-  },
   --Typr
   {
     'nvzone/typr',
@@ -415,10 +409,10 @@ require('lazy').setup({
       require('auto-dark-mode').setup {
         update_interval = 1000,
         set_dark_mode = function()
-          vim.cmd 'colorscheme forest-night-ethereal'
+          vim.cmd 'colorscheme kanso-mist'
         end,
         set_light_mode = function()
-          vim.cmd 'colorscheme forest-night-ethereal-light'
+          vim.cmd 'colorscheme kanso-pearl'
         end,
       }
       -- Enable the plugin on startup
@@ -724,7 +718,7 @@ require('lazy').setup({
     name = 'rose-pine',
     -- priority = 1000, -- Make sure it loads before other plugins
   },
-  --[[ 
+  --[[
   {
     'AlexvZyl/nordic.nvim',
     --priority = 500,
